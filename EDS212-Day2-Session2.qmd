@@ -37,3 +37,17 @@ dfdz
 ```
 
 #### Penguin GGplot
+
+body mass vs flipper length
+
+```{r}
+ggplot(data.frame(penguins), aes(x = body_mass_g, y = flipper_length_mm)) + 
+  labs(title="Palmer Penguins Body Dimensions", 
+       x = "Body Mass (g)", 
+       y = "Flipper Length (mm)"
+       ) +
+  geom_point(
+    aes(color = island)
+    )+
+  theme_grey()
+```
